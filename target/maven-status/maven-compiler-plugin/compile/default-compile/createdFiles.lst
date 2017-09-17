@@ -5,5 +5,7 @@ com\waikato\base\BasePage.class
 com\waikato\util\ConfigPropertyRead.class
 com\waikato\base\BaseTest.class
 com\waikato\base\BrowserFactoryAll$1.class
+com\wikato\pageobjects\SearchScreen.class
 com\waikato\base\BrowserFactoryAll.class
 com\waikato\base\BaseFramework.class
+com\wikato\pageobjects\HomeScreen.class
