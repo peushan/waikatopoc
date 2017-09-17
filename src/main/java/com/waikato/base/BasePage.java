@@ -72,11 +72,11 @@ public class BasePage extends BaseFramework {
 			try {
 				element.sendKeys(text);
 			} catch (Exception d) {
-				logger.error("sendKeys(element, " + text + ") failed with error : " + e.getMessage());
+				logger.error("sendKeys(element: "+ element + "text: "+ text + ") failed with error : " + e.getMessage());
 			}
 		} catch (Exception e) {
-			logger.error("sendKeys(element, " + text + ") failed with error : " + e.getMessage());
-		}
+            logger.error("sendKeys(element: "+ element + "text: "+ text + ") failed with error : " + e.getMessage());
+        }
 	}
 	
 	/**
@@ -100,7 +100,7 @@ public class BasePage extends BaseFramework {
 
 	}
 
-	protected void waitfor(ExpectedCondition<WebElement> condition, Integer timeOutInSeconds) {
+	private void waitfor(ExpectedCondition<WebElement> condition, Integer timeOutInSeconds) {
 		timeOutInSeconds = timeOutInSeconds != null ? timeOutInSeconds : 30;
 		WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
 		wait.until(condition);
